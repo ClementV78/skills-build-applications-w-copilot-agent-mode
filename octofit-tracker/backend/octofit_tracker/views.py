@@ -26,10 +26,11 @@ class WorkoutViewSet(viewsets.ModelViewSet):
 
 @api_view(['GET'])
 def api_root(request, format=None):
+    base_url = 'https://effective-fiesta-x5r7qpjwx559hrw5-8000.app.github.dev/'
     return Response({
-        'users': 'api/users/',
-        'teams': 'api/teams/',
-        'activity': 'api/activity/',
-        'leaderboard': 'api/leaderboard/',
-        'workouts': 'api/workouts/',
+        'users': base_url + 'api/users/',
+        'teams': base_url + 'api/teams/',
+        'activities': base_url + 'api/activities/',
+        'leaderboard': base_url + 'api/leaderboard/',
+        'workouts': base_url + 'api/workouts/',
     })
