@@ -26,7 +26,8 @@ class WorkoutViewSet(viewsets.ModelViewSet):
 
 @api_view(['GET'])
 def api_root(request, format=None):
-    base_url = 'https://effective-fiesta-x5r7qpjwx559hrw5-8000.app.github.dev/'
+    from django.conf import settings
+    base_url = settings.CODESPACE_URL
     return Response({
         'users': base_url + 'api/users/',
         'teams': base_url + 'api/teams/',

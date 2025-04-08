@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+# Codespace URL for API
+CODESPACE_URL = "https://effective-fiesta-x5r7qpjwx559hrw5-8000.app.github.dev"
 
 # Application definition
 
